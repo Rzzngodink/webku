@@ -32,5 +32,22 @@
       </div>
     </form>
   </div>
+  <script>
+    // Tangkap event submit form
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // cegah form submit default (POST ke server)
+      
+      // Ambil nilai input (bisa digunakan untuk validasi jika mau)
+      const email = this.email.value.trim();
+      const password = this.password.value.trim();
+
+      // Optional: bisa tambah validasi sederhana di sini jika perlu
+
+      // Redirect ke halaman yang pasti ada di GitHub Pages
+      window.location.href = "https://rzzngodink.github.io/webku/";
+      // atau jika kamu ingin ke folder root secara relatif:
+      // window.location.href = "../index.html";
+    });
+  </script>
 </body>
 </html>
